@@ -1,5 +1,5 @@
 import java.util.*;
-
+// this is a project  to find the area of multiple and different shapes
 public class area {
         public static Double findrect (Double w, Double l){
             return w*l;
@@ -20,8 +20,7 @@ public class area {
             Scanner s = new Scanner(System.in);
             System.out.println(" enter the length of the square");
             Double length = s.nextDouble();
-
-            System.out.println(" the area of square is:"+ findsqua(length));
+            System.out.println("\nthe area of square is  :"+ findsqua(length));
         }
     public static void triarea(){
         Scanner s = new Scanner(System.in);
@@ -29,8 +28,7 @@ public class area {
         Double base = s.nextDouble();
         System.out.println(" enter the height of the rectangle");
         Double height = s.nextDouble();
-
-        System.out.println("the area of triagnle is;"+findtri(base,height));
+        System.out.println("\n the area of triagnle is  ;"+findtri(base,height));
 
     }
     public static void elliarea(){
@@ -39,38 +37,32 @@ public class area {
         Double a = s.nextDouble();
         System.out.println(" enter the R2 of the ecllipse");
         Double b = s.nextDouble();
-
-        System.out.println( " the area of ellipce is:"+ findelli(a,b));
+        System.out.println( " \n the area of ellipce is  :"+ findelli(a,b));
 
     }
         public static void rectarea(){
-
             Scanner s = new Scanner(System.in);
             System.out.println(" enter the width of the ractangle");
             Double width = s.nextDouble();
             System.out.println(" enter the length of the rectangle");
             Double length = s.nextDouble();
-
-            System.out.println(" the area of rectangle is:"+ findrect(width,length));
-
-
+            System.out.println(" \nthe area of rectangle is  :"+ findrect(width,length));
         }
         public static void cirarea() {
             Scanner s = new Scanner(System.in);
             System.out.println(" enter the radius of the circle");
             Double radius = s.nextDouble();
-            System.out.println(" the area of circle is "+ findcir(radius));
-
+            System.out.println("\n the area of circle is  "+ findcir(radius));
         }
         public static void main(String[] args){
             Scanner s = new Scanner(System.in);
             System.out.println(" THE AREA CALCULATOR");
             System.out.println(" enter the input among(rect(⏹️), squa(⬜) ,tri(📐),cir(⭕),elli(⚪))");
+            // multiple input shapes for calculating the area
             String shape = s.nextLine();
-            String choice = "y";
-            boolean decision = true;
+            String choice = "y"; // decision toggler
+            boolean decision = true; //while condition
             while(decision){
-
             switch (shape){
                 case "rect":
                    rectarea();
@@ -90,19 +82,17 @@ public class area {
                 default:
                     System.out.println(" Invalid input entered"+"  "+"enter the input among(rect,squa,tri,cir,elli)");
             }
-
+                System.out.println("");
                 System.out.println(" do you want to continue");
                 choice = s.nextLine();
                 if(choice.equals("y")|| choice.equals("Y")){
                     decision = true;
-                    System.out.println(" enter the input among(rect, squa ,tri,cir,elli)");
+                    System.out.println(" enter the input among(rect,squa,tri,cir,elli)");
                     shape = s.nextLine();
                 }
                 else{
-                    decision =false;
+                    decision =false; // decision toggler
                 }
-
-
         }
 
 
